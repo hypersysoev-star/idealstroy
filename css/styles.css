@@ -737,22 +737,58 @@ header.scrolled .phone-link {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.ba-container {
-    max-width: 850px;
+.ba-grid {
+    max-width: 1400px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.ba-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.ba-card-title {
+    text-align: center;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .ba-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ba-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 .ba-slider-wrapper {
     position: relative;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.ba-slider-wrapper:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
 .ba-slider {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/10;
+    aspect-ratio: 4/3;
     overflow: hidden;
     cursor: ew-resize;
     background: #222;
@@ -1637,148 +1673,58 @@ header.scrolled .phone-link {
     flex-wrap: wrap;
 }
 
-/* === ВИЗУАЛИЗАЦИЯ VS РЕАЛИЗАЦИЯ (СЛАЙДЕР СРАВНЕНИЯ) === */
-.comparison-section {
+/* === VISUALIZATIONS GALLERY === */
+.visualizations-section {
     padding: 90px 5%;
     background: var(--bg-light);
 }
 
-.comparison-grid {
-    max-width: 1200px;
+.visualizations-grid {
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.comparison-card {
-    background: var(--white);
+.visualization-card {
+    position: relative;
     border-radius: 20px;
-    padding: 25px;
+    overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.4s;
+    aspect-ratio: 4/3;
 }
 
-.comparison-card:hover {
+.visualization-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.comparison-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.comparison-slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 16px;
-    user-select: none;
-}
-
-.comparison-images {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.comparison-after {
+.visualization-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
 }
 
-.comparison-before-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 2;
+.visualization-card:hover img {
+    transform: scale(1.05);
 }
 
-.comparison-before {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+@media (max-width: 1024px) {
+    .visualizations-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
 }
 
-.comparison-handle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    z-index: 3;
-    cursor: ew-resize;
-}
-
-.comparison-handle-line {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background: var(--white);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.comparison-handle-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, var(--accent), #a68b4b);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(201, 169, 98, 0.5);
-    transition: all 0.3s;
-}
-
-.comparison-handle:hover .comparison-handle-circle {
-    transform: translate(-50%, -50%) scale(1.1);
-    box-shadow: 0 6px 24px rgba(201, 169, 98, 0.7);
-}
-
-.comparison-labels {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    z-index: 4;
-    pointer-events: none;
-}
-
-.comparison-label-before,
-.comparison-label-after {
-    background: rgba(26, 26, 46, 0.85);
-    backdrop-filter: blur(10px);
-    color: var(--white);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+@media (max-width: 768px) {
+    .visualizations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 /* === FOOTER (ПОДВАЛ) === */
