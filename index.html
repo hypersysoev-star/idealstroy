@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИдеалСтрой — Ремонт квартир, домов, офисов под ключ | Ростовская область, Краснодарский край</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M16 4L4 14H7V26H25V14H28L16 4Z" fill="#1a1a2e"/><rect x="12" y="17" width="8" height="7" rx="1" fill="#c9a962"/><circle cx="24" cy="8" r="6" fill="#1a1a2e" stroke="#c9a962" stroke-width="1.5"/><path d="M21 8L23 10L27 6" stroke="#c9a962" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="logo-text-group">
+                <div class="logo-text"><span class="ideal">ИДЕАЛ</span><span class="stroy">СТРОЙ</span></div>
+                <div class="logo-sub">Ремонт квартир под ключ</div>
+            </div>
+        </a>
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#before-after">До/После</a>
+            <a href="#team">Команда</a>
+            <a href="#portfolio">Работы</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#design">Дизайн</a>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+79628738511" class="phone-link">+7 (962) 873-85-11</a>
+            <a href="#" class="btn-header" onclick="openCallback();return false;">Расчёт сметы</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg"><img id="hero-bg-img" alt="ИдеалСтрой"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-tag">🏠 Ростовская область и Краснодарский край</div>
+                <h1>Ремонт квартир <span>под ключ</span> с гарантией 3 года</h1>
+                <p>ИдеалСтрой — ремонт квартир, домов и офисов от эконом до премиум класса. Работаем по договору, соблюдаем сроки. Рассрочка.</p>
+                <ul class="hero-list">
+                    <li>Узкая специализация мастеров — высокое качество</li>
+                    <li>Рассрочка на ремонт — удобная оплата</li>
+                    <li>Дизайн-проекты любой сложности</li>
+                </ul>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary" onclick="openCallback();return false;">Рассчитать стоимость →</a>
+                    <a href="#portfolio" class="btn-secondary">Смотреть работы</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><div class="hero-stat-number">3000+</div><div class="hero-stat-text">Объектов сдано</div></div>
+                    <div class="hero-stat"><div class="hero-stat-number">15</div><div class="hero-stat-text">Лет на рынке</div></div>
+                    <div class="hero-stat"><div class="hero-stat-number">3</div><div class="hero-stat-text">Года гарантии</div></div>
+                </div>
+            </div>
+            <div class="hero-gallery">
+                <div class="hero-gallery-grid">
+                    <div class="hero-gallery-item"><img id="gallery-1" alt="Гостиная"></div>
+                    <div class="hero-gallery-item"><img id="gallery-2" alt="Спальня"></div>
+                    <div class="hero-gallery-item"><img id="gallery-3" alt="Квартира"></div>
+                </div>
+                <div class="hero-badge">
+                    <div class="hero-badge-icon">✓</div>
+                    <div class="hero-badge-text"><strong>Сдано в срок</strong>98% проектов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-bar">
+        <div class="trust-content">
+            <div class="trust-item"><span>📋</span><strong>Работаем по договору</strong></div>
+            <div class="trust-item"><span>💰</span><strong>Поэтапная оплата</strong></div>
+            <div class="trust-item"><span>🛡️</span><strong>Гарантия 3 года</strong></div>
+            <div class="trust-item"><span>📅</span><strong>Точные сроки</strong></div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">🔧 Виды ремонта</span>
+            <h2 class="section-title">Полный комплекс работ</h2>
+            <p class="section-subtitle">Квартиры, дома, офисы — от эконом до премиум класса</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card animate-on-scroll">
+                <div class="service-card-img"><img src="images/services/service-1.jpg" alt="Черновая отделка"></div>
+                <div class="service-card-content">
+                    <div class="service-card-icon">🔨</div>
+                    <h3>Черновая отделка</h3>
+                    <p>Демонтаж, штукатурка стен, стяжка пола, разводка электрики и сантехники.</p>
+                    <div class="service-card-price">от 5 500 ₽ <span>за м²</span></div>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="service-card-img"><img id="service-2" alt="Чистовая отделка"></div>
+                <div class="service-card-content">
+                    <div class="service-card-icon">🎨</div>
+                    <h3>Чистовая отделка</h3>
+                    <p>Шпаклёвка, покраска, обои, укладка плитки и ламината, натяжные потолки.</p>
+                    <div class="service-card-price">от 8 500 ₽ <span>за м²</span></div>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="service-card-img"><img src="images/services/service-3.png" alt="Капитальный ремонт"></div>
+                <div class="service-card-content">
+                    <div class="service-card-icon">⚡</div>
+                    <h3>Капитальный ремонт</h3>
+                    <p>Полная замена коммуникаций, перепланировка, комплексный ремонт под ключ.</p>
+                    <div class="service-card-price">от 15 000 ₽ <span>за м²</span></div>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="service-card-img"><img id="service-4" alt="Дизайнерский ремонт"></div>
+                <div class="service-card-content">
+                    <div class="service-card-icon">💎</div>
+                    <h3>Дизайнерский ремонт</h3>
+                    <p>Разработка дизайн-проекта + реализация. Премиальные материалы и авторский надзор.</p>
+                    <div class="service-card-price">от 25 000 ₽ <span>за м²</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАЛЬКУЛЯТОР СТОИМОСТИ -->
+    <section class="calculator" id="calculator">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">💰 Калькулятор</span>
+            <h2 class="section-title">Рассчитайте стоимость вашего ремонта</h2>
+            <p class="section-subtitle">Выберите параметры и получите ориентировочную стоимость прямо сейчас</p>
+        </div>
+
+        <div class="calculator-container animate-on-scroll">
+            <div class="calculator-form">
+                <div class="calc-group">
+                    <label class="calc-label">Тип ремонта</label>
+                    <div class="calc-options">
+                        <button type="button" class="calc-option active" data-type="cosmetic" data-price="8500">
+                            <span class="option-icon">🎨</span>
+                            <span class="option-title">Косметический</span>
+                            <span class="option-price">от 8 500 ₽/м²</span>
+                        </button>
+                        <button type="button" class="calc-option" data-type="complete" data-price="15000">
+                            <span class="option-icon">⚡</span>
+                            <span class="option-title">Капитальный</span>
+                            <span class="option-price">от 15 000 ₽/м²</span>
+                        </button>
+                        <button type="button" class="calc-option" data-type="designer" data-price="25000">
+                            <span class="option-icon">💎</span>
+                            <span class="option-title">Дизайнерский</span>
+                            <span class="option-price">от 25 000 ₽/м²</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calc-group">
+                    <label class="calc-label">Площадь помещения</label>
+                    <div class="calc-range-container">
+                        <input type="range" id="areaRange" class="calc-range" min="20" max="200" value="50" step="5">
+                        <div class="range-value" id="areaValue">50 м²</div>
+                    </div>
+                </div>
+
+                <div class="calc-group">
+                    <label class="calc-label">Дополнительные услуги</label>
+                    <div class="calc-checkboxes">
+                        <label class="calc-checkbox">
+                            <input type="checkbox" data-service="design" data-price="1500">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Дизайн-проект <span class="checkbox-price">+1 500 ₽/м²</span></span>
+                        </label>
+                        <label class="calc-checkbox">
+                            <input type="checkbox" data-service="furniture" data-price="3000">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Мебель под ключ <span class="checkbox-price">+3 000 ₽/м²</span></span>
+                        </label>
+                        <label class="calc-checkbox">
+                            <input type="checkbox" data-service="warranty" data-price="500">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Расширенная гарантия <span class="checkbox-price">+500 ₽/м²</span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-result">
+                <div class="result-card">
+                    <div class="result-label">Ориентировочная стоимость</div>
+                    <div class="result-price" id="totalPrice">425 000 ₽</div>
+                    <div class="result-details">
+                        <div class="result-item">
+                            <span>Площадь:</span>
+                            <strong id="resultArea">50 м²</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>Цена за м²:</span>
+                            <strong id="resultPricePerM">8 500 ₽</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>Срок выполнения:</span>
+                            <strong id="resultDuration">~1.5 месяца</strong>
+                        </div>
+                    </div>
+                    <button class="result-btn" onclick="openCallback()">
+                        Получить точный расчёт
+                    </button>
+                    <div class="result-note">
+                        * Окончательная стоимость определяется после осмотра объекта
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="before-after" id="before-after">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">✨ Результат</span>
+            <h2 class="section-title">До и После ремонта</h2>
+            <p class="section-subtitle">Двигайте ползунок — смотрите реальное преображение</p>
+        </div>
+        <div class="ba-container">
+            <div class="ba-slider-wrapper">
+                <div class="ba-slider" id="baSlider">
+                    <div class="ba-image before"><img id="ba-before" alt="До ремонта"></div>
+                    <div class="ba-image after"><img id="ba-after" alt="После ремонта"></div>
+                    <div class="ba-handle" id="baHandle"><div class="ba-handle-circle">⟷</div></div>
+                    <span class="ba-label before-label">ДО</span>
+                    <span class="ba-label after-label">ПОСЛЕ</span>
+                </div>
+            </div>
+            <div class="ba-info">
+                <div class="ba-info-item"><strong>78 м²</strong><span>Площадь квартиры</span></div>
+                <div class="ba-info-item"><strong>2.5 мес</strong><span>Срок ремонта</span></div>
+                <div class="ba-info-item"><strong>1.2 млн ₽</strong><span>Стоимость</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="team-content">
+            <div class="team-image"><img id="team-img" alt="Команда ИдеалСтрой"></div>
+            <div class="team-text">
+                <span class="section-tag">👥 О компании</span>
+                <h2>Команда из 35 специалистов с узкой специализацией</h2>
+                <p>ИдеалСтрой — это команда из 35 профессионалов с узкой специализацией. Каждый мастер — эксперт в своём деле. Ремонтируем квартиры, дома и офисы от эконом до премиум класса.</p>
+                <p>Прораб всегда на связи, ежедневные фотоотчёты в WhatsApp, поэтапная приёмка работ. Офис в Ростове-на-Дону.</p>
+                <div class="team-stats">
+                    <div class="team-stat"><div class="team-stat-number">35</div><div class="team-stat-text">Специалистов</div></div>
+                    <div class="team-stat"><div class="team-stat-number">15</div><div class="team-stat-text">Лет опыта</div></div>
+                    <div class="team-stat"><div class="team-stat-number">3000+</div><div class="team-stat-text">Объектов</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">📷 Наши работы</span>
+            <h2 class="section-title">Портфолио ИдеалСтрой</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><img id="port-1" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Капитальный</span><h3 class="portfolio-title">Кухня-гостиная</h3><p class="portfolio-info">85 м²</p></div></div>
+            <div class="portfolio-item"><img id="port-2" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Дизайнерский</span><h3 class="portfolio-title">Гостиная лофт</h3><p class="portfolio-info">72 м²</p></div></div>
+            <div class="portfolio-item"><img id="port-3" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Под ключ</span><h3 class="portfolio-title">Спальня</h3><p class="portfolio-info">95 м²</p></div></div>
+            <div class="portfolio-item"><img id="port-4" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Дизайнерский</span><h3 class="portfolio-title">Столовая</h3><p class="portfolio-info">110 м²</p></div></div>
+            <div class="portfolio-item"><img id="port-5" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Санузел</span><h3 class="portfolio-title">Ванная</h3><p class="portfolio-info">8 м²</p></div></div>
+            <div class="portfolio-item"><img id="port-6" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Премиум</span><h3 class="portfolio-title">Спальня</h3><p class="portfolio-info">120 м²</p></div></div>
+        </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="reviews" id="reviews">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">⭐ Отзывы</span>
+            <h2 class="section-title">Что говорят клиенты</h2>
+        </div>
+        <div class="reviews-rating">
+            <div class="reviews-stars">★★★★★</div>
+            <div class="reviews-score">5.0</div>
+            <div class="reviews-count">26+ отзывов на Авито</div>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">М</div>
+                    <div>
+                        <div class="review-author">Марина</div>
+                        <div class="review-date">3 декабря 2025</div>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">Делали ремонт одной комнаты с Андреем и его командой, всё чётко по делу, быстро, по всем вопросам консультировали. Осталась очень довольна!</div>
+                <div class="review-service">Ремонт квартир под ключ</div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Я</div>
+                    <div>
+                        <div class="review-author">Яна</div>
+                        <div class="review-date">24 июня 2025</div>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">Андрей был со мной на связи от начала до конца, решал все мои проблемы. Оплата по факту выполненных работ. По факту сдачи объекта я была самой довольной клиенткой!</div>
+                <div class="review-service">Ремонт квартир под ключ</div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">А</div>
+                    <div>
+                        <div class="review-author">Анна</div>
+                        <div class="review-date">8 июня 2025</div>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">Живу в Новороссийске, искала надёжных мастеров. Всё обговорили, чётко по делу. Всё чисто, аккуратно сделано. Учли все пожелания. Обязательно рекомендую!</div>
+                <div class="review-service">Ремонт квартир под ключ</div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Л</div>
+                    <div>
+                        <div class="review-author">Лидия</div>
+                        <div class="review-date">12 марта 2025</div>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">Ремонт сделали согласно договору и смете, не было непредсказуемых трат. Побольше таких людей! Видно что человек работает на совесть.</div>
+                <div class="review-service">Ремонт квартир под ключ</div>
+            </div>
+        </div>
+        <div class="reviews-cta">
+            <a href="https://www.avito.ru/brands/i224792810" target="_blank">
+                <span class="avito-badge">AVITO</span>
+                Все отзывы на Авито →
+            </a>
+        </div>
+    </section>
+
+    <!-- ДИЗАЙН ИНТЕРЬЕРОВ - Экран 1: Дизайнер и работы -->
+    <section class="design" id="design">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">🎨 Дизайн интерьеров</span>
+            <h2 class="section-title">Создаём проекты любой сложности</h2>
+            <p class="section-subtitle">От планировочного решения до полного дизайн-проекта с авторским надзором</p>
+        </div>
+        <div class="design-content">
+            <div class="design-photo">
+                <img id="designer-photo" alt="Дизайнер Андреева Лидия Александровна">
+                <div class="design-badge">Дизайнер</div>
+            </div>
+            <div class="design-info">
+                <h2>Андреева Лидия Александровна</h2>
+                <p>Профессиональный дизайнер интерьеров. Создаёт функциональные и стильные пространства. Работает в разных стилях — от минимализма до классики. Каждый проект уникален и учитывает ваш образ жизни.</p>
+                <ul class="design-features">
+                    <li><span>✓</span> Планировочные решения с учётом эргономики</li>
+                    <li><span>✓</span> Фотореалистичные 3D-визуализации</li>
+                    <li><span>✓</span> Подбор материалов и мебели</li>
+                    <li><span>✓</span> Авторский надзор за реализацией</li>
+                    <li><span>✓</span> Работа под ключ: от идеи до воплощения</li>
+                </ul>
+                <a href="#" class="btn-primary" onclick="openCallback();return false;">Заказать дизайн-проект →</a>
+                <div class="design-gallery">
+                    <a href="project1.pdf" target="_blank" class="design-gallery-item" title="Дизайн-проект «Левобережье»"><img id="proj-1" alt="Проект Левобережье"></a>
+                    <a href="project2.pdf" target="_blank" class="design-gallery-item" title="Дизайн-проект «ЖК Сияние» кв.86"><img id="proj-2" alt="Проект ЖК Сияние"></a>
+                    <a href="project3.pdf" target="_blank" class="design-gallery-item" title="Дизайн-проект «ЖК Сияние» кв.87"><img id="proj-3" alt="Проект ЖК Сияние"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДИЗАЙН ИНТЕРЬЕРОВ - Экран 2: Процесс и цены -->
+    <section class="design-process">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">📋 Этапы работы</span>
+            <h2 class="section-title">Как создаётся дизайн-проект</h2>
+        </div>
+        <div class="design-process-grid">
+            <div class="design-process-item">
+                <div class="design-process-icon">💬</div>
+                <h3>1. Бриф</h3>
+                <p>Выясняем пожелания, бюджет, сроки. Изучаем особенности помещения.</p>
+            </div>
+            <div class="design-process-item">
+                <div class="design-process-icon">📐</div>
+                <h3>2. Планировка</h3>
+                <p>Создаём варианты планировочных решений. Выбираем лучший.</p>
+            </div>
+            <div class="design-process-item">
+                <div class="design-process-icon">🖼</div>
+                <h3>3. Визуализация</h3>
+                <p>Показываем как будет выглядеть интерьер в 3D до начала ремонта.</p>
+            </div>
+            <div class="design-process-item">
+                <div class="design-process-icon">🏠</div>
+                <h3>4. Реализация</h3>
+                <p>Воплощаем проект в жизнь. Авторский надзор за каждым этапом.</p>
+            </div>
+        </div>
+        <div class="design-prices">
+            <div class="design-price-card" onclick="openPackage('mini')">
+                <div class="design-price-icon">📐</div>
+                <h3>МИНИ</h3>
+                <p>Обмерный план, планировка 2-3 варианта с мебелью</p>
+                <div class="design-price-value">500 ₽ <span>/ м²</span></div>
+                <div class="design-price-term">3 дня</div>
+            </div>
+            <div class="design-price-card" onclick="openPackage('express')">
+                <div class="design-price-icon">⚡</div>
+                <h3>ЭКСПРЕСС</h3>
+                <p>Базовые чертежи + планы электрики и розеток</p>
+                <div class="design-price-value">900 ₽ <span>/ м²</span></div>
+                <div class="design-price-term">7 дней</div>
+            </div>
+            <div class="design-price-card featured" onclick="openPackage('lite')">
+                <div class="design-price-icon">🖼</div>
+                <h3>ЛАЙТ</h3>
+                <p>Чертежи + электрика + 3D визуализация комнат</p>
+                <div class="design-price-value">1 500 ₽ <span>/ м²</span></div>
+                <div class="design-price-term">14 дней</div>
+            </div>
+            <div class="design-price-card" onclick="openPackage('standard')">
+                <div class="design-price-icon">📦</div>
+                <h3>СТАНДАРТ</h3>
+                <p>Полный пакет 45-60 листов чертежей + 3D</p>
+                <div class="design-price-value">2 500 ₽ <span>/ м²</span></div>
+                <div class="design-price-term">4 недели</div>
+            </div>
+            <div class="design-price-card" onclick="openPackage('maximum')">
+                <div class="design-price-icon">💎</div>
+                <h3>МАКСИМУМ</h3>
+                <p>Полный проект + комплектация «от плинтуса до холодильника»</p>
+                <div class="design-price-value">2 900 ₽ <span>/ м²</span></div>
+                <div class="design-price-term">5 недель</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">📋 Этапы</span>
+            <h2 class="section-title">Как мы работаем</h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-item"><div class="process-number">1</div><h3 class="process-title">Заявка</h3><p class="process-desc">Оставляете заявку</p></div>
+            <div class="process-item"><div class="process-number">2</div><h3 class="process-title">Замер</h3><p class="process-desc">Бесплатный выезд</p></div>
+            <div class="process-item"><div class="process-number">3</div><h3 class="process-title">Договор</h3><p class="process-desc">Фиксируем цену</p></div>
+            <div class="process-item"><div class="process-number">4</div><h3 class="process-title">Ремонт</h3><p class="process-desc">Выполняем работы</p></div>
+            <div class="process-item"><div class="process-number">5</div><h3 class="process-title">Сдача</h3><p class="process-desc">Принимаете квартиру</p></div>
+        </div>
+    </section>
+
+    <!-- FAQ СЕКЦИЯ -->
+    <section class="faq" id="faq">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">❓ Вопросы и ответы</span>
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <p class="section-subtitle">Ответы на популярные вопросы о ремонте</p>
+        </div>
+
+        <div class="faq-container animate-on-scroll">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">💰</span>
+                    <h3>Какова окончательная стоимость ремонта?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Окончательная стоимость определяется после замера объекта и согласования дизайн-проекта. Мы составляем подробную смету, в которой указываем стоимость материалов и работ. Цена фиксируется в договоре и не меняется в процессе ремонта.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">⏱️</span>
+                    <h3>Сколько времени займет ремонт?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Сроки зависят от площади и типа ремонта. В среднем: косметический ремонт квартиры 50 м² — 1-1.5 месяца, капитальный — 2-3 месяца, дизайнерский — 3-4 месяца. Точные сроки прописываем в договоре с поэтапным графиком работ.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">📋</span>
+                    <h3>Нужен ли мне дизайн-проект?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Дизайн-проект не обязателен, но мы его рекомендуем. Он помогает визуализировать результат, точно рассчитать материалы и избежать переделок. Мы предлагаем пакеты от планировочных решений до полного дизайн-проекта с 3D-визуализацией.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">🛡️</span>
+                    <h3>Какая гарантия на ремонт?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Мы даем гарантию 3 года на все выполненные работы. Гарантия прописывается в договоре. Если в течение гарантийного срока возникнут проблемы по нашей вине, мы бесплатно их устраним.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">💳</span>
+                    <h3>Какая система оплаты?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Работаем по системе поэтапной оплаты. Вы платите за каждый завершенный этап после приемки работ. Никаких авансов за весь ремонт сразу! Также предоставляем рассрочку на удобных условиях.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">📦</span>
+                    <h3>Вы закупаете материалы или это моя задача?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Мы предлагаем оба варианта. Можем закупить все материалы сами (с согласованием с вами) или вы покупаете их самостоятельно по нашей смете. При закупке через нас вы получаете оптовые цены и гарантию качества материалов.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">🏠</span>
+                    <h3>В каких городах вы работаете?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Мы работаем в Ростовской области (Ростов-на-Дону, Батайск, Аксай, Таганрог) и Краснодарском крае (Краснодар, Новороссийск, Сочи, Анапа). Офис находится в Ростове-на-Дону, но выезжаем на объекты по всему региону.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">📸</span>
+                    <h3>Можно ли посмотреть объекты вживую?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, мы организуем выезд на объекты, где идут работы или недавно завершенные. Также отправляем ежедневные фотоотчеты в WhatsApp и проводим видеозвонки с объекта по вашему запросу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Рассчитайте стоимость ремонта бесплатно</h2>
+            <p>Замерщик приедет и составит смету. Рассрочка на ремонт!</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary" onclick="openCallback();return false;">Вызвать замерщика →</a>
+                <a href="tel:+79628738511" class="btn-secondary">+7 (962) 873-85-11</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="contacts" id="contacts">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">📍 Контакты</span>
+            <h2 class="section-title">Как с нами связаться</h2>
+            <p class="section-subtitle">Мы всегда на связи и готовы ответить на ваши вопросы</p>
+        </div>
+
+        <div class="contacts-container animate-on-scroll">
+            <div class="contacts-info">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-content">
+                        <h3>Телефон</h3>
+                        <a href="tel:+79628738511">+7 (962) 873-85-11</a>
+                        <p>Ежедневно с 8:00 до 21:00</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <div class="contact-content">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/79628738511">Написать в WhatsApp</a>
+                        <p>Быстрые ответы и фотоотчеты</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-content">
+                        <h3>Email</h3>
+                        <a href="mailto:info@idealstroy.ru">info@idealstroy.ru</a>
+                        <p>Ответим в течение часа</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-content">
+                        <h3>Адрес офиса</h3>
+                        <p>г. Ростов-на-Дону<br>ул. Мечникова 39б, офис 9</p>
+                        <p>Пн-Пт: 9:00-18:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts-map">
+                <!-- Яндекс.Карта -->
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae6a8f5c3b9e4d7a2f1c8e9b5a3d7f2c4&amp;source=constructor"
+                    width="100%"
+                    height="400"
+                    frameborder="0"
+                    style="border-radius: 20px; display: block;">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="contacts-social animate-on-scroll">
+            <h3>Мы в соцсетях</h3>
+            <div class="social-links">
+                <a href="#" class="social-link" target="_blank">
+                    <span class="social-icon">📘</span>
+                    <span>ВКонтакте</span>
+                </a>
+                <a href="#" class="social-link" target="_blank">
+                    <span class="social-icon">📷</span>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="social-link" target="_blank">
+                    <span class="social-icon">▶️</span>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://www.avito.ru/brands/i224792810" class="social-link" target="_blank">
+                    <span class="social-icon">🛒</span>
+                    <span>Авито</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <div class="logo-icon" style="background:var(--accent)">
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M16 4L4 14H7V26H25V14H28L16 4Z" fill="#1a1a2e"/><rect x="12" y="17" width="8" height="7" rx="1" fill="#c9a962"/></svg>
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text"><span class="ideal" style="color:#fff">ИДЕАЛ</span><span class="stroy">СТРОЙ</span></div>
+                        <div class="logo-sub" style="color:rgba(255,255,255,.5)">Ремонт под ключ</div>
+                    </div>
+                </a>
+                <p>ИдеалСтрой — ремонт квартир, домов и офисов под ключ. Ростовская область и Краснодарский край. Гарантия 3 года.</p>
+            </div>
+            <div><h4 class="footer-title">Услуги</h4><ul class="footer-links"><li><a href="#">Ремонт квартир</a></li><li><a href="#">Ремонт домов</a></li><li><a href="#">Ремонт офисов</a></li><li><a href="#">Дизайн-проекты</a></li></ul></div>
+            <div><h4 class="footer-title">Компания</h4><ul class="footer-links"><li><a href="#">О нас</a></li><li><a href="#">Портфолио</a></li><li><a href="#">Отзывы</a></li><li><a href="#">Рассрочка</a></li></ul></div>
+            <div class="footer-contact"><h4 class="footer-title">Контакты</h4><p>📍 Ростов-на-Дону,<br>ул. Мечникова 39б, офис 9</p><p>📞 <a href="tel:+79628738511">+7 (962) 873-85-11</a></p><p>✉️ <a href="mailto:Idealsystem26@yandex.ru">Idealsystem26@yandex.ru</a></p><div class="footer-social"><a href="#">VK</a><a href="#">TG</a><a href="https://wa.me/79628738511" target="_blank">WA</a></div></div>
+        </div>
+        <div class="footer-bottom"><p>© 2025 ИдеалСтрой. 15 лет на рынке.</p><a href="#">Политика конфиденциальности</a></div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/79628738511" class="float-btn whatsapp-btn" target="_blank">💬</a>
+        <button class="float-btn callback-btn" onclick="openCallback()">📞</button>
+    </div>
+
+    <div class="modal" id="callbackModal" onclick="closeCallback()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeCallback()">✕</span>
+            <h3>Бесплатный расчёт</h3>
+            <p>Оставьте номер — перезвоним за 30 секунд</p>
+            <form id="callbackForm" onsubmit="handleFormSubmit(event)" novalidate>
+                <div class="form-group">
+                    <input type="text" id="userName" name="name" placeholder="Ваше имя" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="userPhone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="userArea" name="area" placeholder="Площадь квартиры (м²)" required>
+                    <span class="error-message" id="areaError"></span>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Рассчитать стоимость</span>
+                    <span class="btn-loader" style="display:none;">⏳</span>
+                </button>
+            </form>
+            <div class="success-message" id="successMessage" style="display:none;">
+                <div class="success-icon">✓</div>
+                <h4>Заявка отправлена!</h4>
+                <p>Мы свяжемся с вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальные окна пакетов дизайна -->
+    <div class="package-modal" id="packageModal" onclick="closePackage()">
+        <div class="package-modal-content" onclick="event.stopPropagation()">
+            <span class="package-modal-close" onclick="closePackage()">✕</span>
+            <div class="package-modal-header">
+                <div class="package-modal-icon" id="packageIcon">📐</div>
+                <div class="package-modal-title" id="packageTitle">МИНИ</div>
+            </div>
+            <div class="package-modal-price" id="packagePrice">500 ₽ <span>/ м²</span></div>
+            <div class="package-modal-term" id="packageTerm">Срок реализации: 3 дня</div>
+            <ul class="package-modal-list" id="packageList">
+            </ul>
+            <div class="package-modal-note" id="packageNote" style="display:none;"></div>
+            <button class="package-modal-btn" onclick="closePackage();openCallback();">Заказать дизайн-проект</button>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
