@@ -1637,6 +1637,124 @@ header.scrolled .phone-link {
     flex-wrap: wrap;
 }
 
+/* === ВИЗУАЛИЗАЦИЯ VS РЕАЛИЗАЦИЯ === */
+.before-after-section {
+    padding: 90px 5%;
+    background: var(--bg-light);
+}
+
+.before-after-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.before-after-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.before-after-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card-image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stage-switcher {
+    display: flex;
+    gap: 8px;
+    background: var(--bg-light);
+    padding: 6px;
+    border-radius: 50px;
+}
+
+.stage-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 8px;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.stage-btn:hover {
+    background: rgba(201, 169, 98, 0.1);
+}
+
+.stage-btn.active {
+    background: linear-gradient(135deg, var(--accent), #a68b4b);
+    box-shadow: 0 4px 12px rgba(201, 169, 98, 0.3);
+}
+
+.stage-btn.active .stage-icon {
+    transform: scale(1.1);
+}
+
+.stage-btn.active .stage-label {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.stage-icon {
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.stage-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
 /* === FOOTER (ПОДВАЛ) === */
 footer {
     background: var(--primary);
@@ -2590,6 +2708,11 @@ footer {
     .faq-item.active .faq-answer {
         padding: 0 30px 25px 30px;
     }
+
+    .before-after-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
 }
 
 /* Мобильные */
@@ -2732,5 +2855,41 @@ footer {
 
     .reviews-grid {
         grid-template-columns: 1fr;
+    }
+
+    .before-after-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-image-container {
+        height: 280px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .stage-switcher {
+        gap: 6px;
+        padding: 5px;
+    }
+
+    .stage-btn {
+        padding: 10px 6px;
+        gap: 4px;
+    }
+
+    .stage-icon {
+        font-size: 20px;
+    }
+
+    .stage-label {
+        font-size: 10px;
     }
 }
