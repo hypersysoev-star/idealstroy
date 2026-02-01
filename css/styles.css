@@ -1775,8 +1775,19 @@ footer {
     box-shadow: 0 5px 18px rgba(201, 169, 98, 0.4);
 }
 
+.float-btn svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
 .float-btn:hover {
     transform: scale(1.1);
+}
+
+.float-btn:active {
+    transform: scale(0.95);
 }
 
 /* === ОТЗЫВЫ === */
