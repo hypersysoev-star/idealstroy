@@ -28,6 +28,10 @@
         <div class="header-right">
             <a href="tel:+79628738511" class="phone-link">+7 (962) 873-85-11</a>
             <a href="#" class="btn-header" onclick="openCallback();return false;">Расчёт сметы</a>
+            <div class="designer-contact">
+                <img src="images/team/designer.jpg" alt="Дизайнер" class="designer-photo">
+                <a href="https://max.ru/u/f9LHodD0cOKXmlAEZIHVNq3CT2BMeFtdW3EL0mqIo6Ygv6CQ-K3AGEPMhLw" target="_blank" class="btn-designer" id="designerBtn">Консультация дизайнера</a>
+            </div>
         </div>
     </header>
 
@@ -166,9 +170,9 @@
                     <label class="calc-label">Дополнительные услуги</label>
                     <div class="calc-checkboxes">
                         <label class="calc-checkbox">
-                            <input type="checkbox" data-service="design" data-price="1500">
+                            <input type="checkbox" data-service="design" data-price="500">
                             <span class="checkbox-custom"></span>
-                            <span class="checkbox-label">Дизайн-проект <span class="checkbox-price">+1 500 ₽/м²</span></span>
+                            <span class="checkbox-label">Дизайн-проект <span class="checkbox-price">+500 ₽/м²</span></span>
                         </label>
                         <label class="calc-checkbox">
                             <input type="checkbox" data-service="furniture" data-price="3000">
@@ -271,7 +275,7 @@
                 <span class="section-tag">👥 О компании</span>
                 <h2>Команда из 35 специалистов с узкой специализацией</h2>
                 <p>ИдеалСтрой — это команда из 35 профессионалов с узкой специализацией. Каждый мастер — эксперт в своём деле. Ремонтируем квартиры, дома и офисы от эконом до премиум класса.</p>
-                <p>Прораб всегда на связи, ежедневные фотоотчёты в WhatsApp, поэтапная приёмка работ. Офис в Ростове-на-Дону.</p>
+                <p>Прораб всегда на связи, ежедневные фотоотчёты в MAX, поэтапная приёмка работ. Офис в Ростове-на-Дону.</p>
                 <div class="team-stats">
                     <div class="team-stat"><div class="team-stat-number">35</div><div class="team-stat-text">Специалистов</div></div>
                     <div class="team-stat"><div class="team-stat-number">15</div><div class="team-stat-text">Лет опыта</div></div>
@@ -287,14 +291,28 @@
             <h2 class="section-title">Портфолио ИдеалСтрой</h2>
         </div>
         <div class="portfolio-grid">
-            <div class="portfolio-item"><img id="port-1" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Капитальный</span><h3 class="portfolio-title">Кухня-гостиная</h3><p class="portfolio-info">85 м²</p></div></div>
-            <div class="portfolio-item"><img id="port-2" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Дизайнерский</span><h3 class="portfolio-title">Гостиная лофт</h3><p class="portfolio-info">72 м²</p></div></div>
-            <div class="portfolio-item"><img id="port-3" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Под ключ</span><h3 class="portfolio-title">Спальня</h3><p class="portfolio-info">95 м²</p></div></div>
-            <div class="portfolio-item"><img src="images/portfolio/dining.jpg" alt="Столовая" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag">Дизайнерский</span><h3 class="portfolio-title">Столовая</h3><p class="portfolio-info">110 м²</p></div></div>
-            <div class="portfolio-item"><img src="images/portfolio/bathroom-port.jpg" alt="Ванная" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag">Санузел</span><h3 class="portfolio-title">Ванная</h3><p class="portfolio-info">8 м²</p></div></div>
-            <div class="portfolio-item"><img src="images/portfolio/bedroom-port.jpg" alt="Спальня" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag">Премиум</span><h3 class="portfolio-title">Спальня</h3><p class="portfolio-info">120 м²</p></div></div>
+            <div class="portfolio-item" onclick="openLightbox(0)"><img id="port-1" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Капитальный</span><h3 class="portfolio-title">Кухня-гостиная</h3></div></div>
+            <div class="portfolio-item" onclick="openLightbox(1)"><img id="port-2" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Дизайнерский</span><h3 class="portfolio-title">Гостиная лофт</h3></div></div>
+            <div class="portfolio-item" onclick="openLightbox(2)"><img id="port-3" alt=""><div class="portfolio-overlay"><span class="portfolio-tag">Под ключ</span><h3 class="portfolio-title">Спальня</h3></div></div>
+            <div class="portfolio-item" onclick="openLightbox(3)"><img src="images/portfolio/dining.jpg" alt="Столовая" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag">Дизайнерский</span><h3 class="portfolio-title">Столовая</h3></div></div>
+            <div class="portfolio-item" onclick="openLightbox(4)"><img src="images/portfolio/bathroom-port.jpg" alt="Ванная" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag">Санузел</span><h3 class="portfolio-title">Ванная</h3></div></div>
+            <div class="portfolio-item" onclick="openLightbox(5)"><img src="images/portfolio/bedroom-port.jpg" alt="Спальня" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag">Стандарт</span><h3 class="portfolio-title">Спальня</h3></div></div>
         </div>
     </section>
+
+    <!-- ЛАЙТБОКС ДЛЯ ПОРТФОЛИО -->
+    <div id="portfolioLightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption">
+                <span id="lightboxTag"></span>
+                <h3 id="lightboxTitle"></h3>
+            </div>
+        </div>
+        <a class="lightbox-prev" onclick="changeLightboxImage(-1)">&#10094;</a>
+        <a class="lightbox-next" onclick="changeLightboxImage(1)">&#10095;</a>
+    </div>
 
     <!-- ОТЗЫВЫ -->
     <section class="reviews" id="reviews">
@@ -390,7 +408,7 @@
                 <a href="#" class="btn-primary" onclick="openCallback();return false;">Заказать дизайн-проект →</a>
                 <div class="design-gallery">
                     <a href="project1.pdf" target="_blank" class="design-gallery-item" title="Дизайн-проект «Береговая»"><img src="images/design/project1-preview.jpg" id="proj-1" alt="Дизайн-проект спальни Береговая"></a>
-                    <a href="project2.pdf" target="_blank" class="design-gallery-item" title="Дизайн-проект «ЖК Сияние» кв.86"><img id="proj-2" alt="Проект ЖК Сияние"></a>
+                    <a href="project2.pdf" target="_blank" class="design-gallery-item" title="Дизайн-проект «Лебоберехье»"><img src="images/design/project2-new.jpg" id="proj-2" alt="Дизайн-проект кухни Лебоберехье"></a>
                     <a href="project3.pdf" target="_blank" class="design-gallery-item" title="Дизайн-проект «ЖК Сияние» кв.87"><img id="proj-3" alt="Проект ЖК Сияние"></a>
                 </div>
             </div>
@@ -571,7 +589,7 @@
                     <span class="faq-arrow">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Да, мы организуем выезд на объекты, где идут работы или недавно завершенные. Также отправляем ежедневные фотоотчеты в WhatsApp и проводим видеозвонки с объекта по вашему запросу.</p>
+                    <p>Да, мы организуем выезд на объекты, где идут работы или недавно завершенные. Также отправляем ежедневные фотоотчеты в MAX и проводим видеозвонки с объекта по вашему запросу.</p>
                 </div>
             </div>
         </div>
@@ -687,8 +705,8 @@
                 <div class="contact-card">
                     <div class="contact-icon">💬</div>
                     <div class="contact-content">
-                        <h3>WhatsApp</h3>
-                        <a href="https://wa.me/79628738511">Написать в WhatsApp</a>
+                        <h3>MAX Мессенджер</h3>
+                        <a href="https://max.ru/u/f9LHodD0cOKXmlAEZIHVNq3CT2BMeFtdW3EL0mqIo6Ygv6CQ-K3AGEPMhLw" target="_blank">Написать в MAX</a>
                         <p>Быстрые ответы и фотоотчеты</p>
                     </div>
                 </div>
@@ -764,16 +782,14 @@
             </div>
             <div><h4 class="footer-title">Услуги</h4><ul class="footer-links"><li><a href="#">Ремонт квартир</a></li><li><a href="#">Ремонт домов</a></li><li><a href="#">Ремонт офисов</a></li><li><a href="#">Дизайн-проекты</a></li></ul></div>
             <div><h4 class="footer-title">Компания</h4><ul class="footer-links"><li><a href="#">О нас</a></li><li><a href="#">Портфолио</a></li><li><a href="#">Отзывы</a></li><li><a href="#">Рассрочка</a></li></ul></div>
-            <div class="footer-contact"><h4 class="footer-title">Контакты</h4><p>📍 Ростов-на-Дону,<br>ул. Мечникова 39б, офис 9</p><p>📞 <a href="tel:+79628738511">+7 (962) 873-85-11</a></p><p>✉️ <a href="mailto:Idealsystem26@yandex.ru">Idealsystem26@yandex.ru</a></p><div class="footer-social"><a href="#">VK</a><a href="#">TG</a><a href="https://wa.me/79628738511" target="_blank">WA</a></div></div>
+            <div class="footer-contact"><h4 class="footer-title">Контакты</h4><p>📍 Ростов-на-Дону,<br>ул. Мечникова 39б, офис 9</p><p>📞 <a href="tel:+79628738511">+7 (962) 873-85-11</a></p><p>✉️ <a href="mailto:Idealsystem26@yandex.ru">Idealsystem26@yandex.ru</a></p><div class="footer-social"><a href="#">VK</a><a href="#">TG</a><a href="https://max.ru/u/f9LHodD0cOKXmlAEZIHVNq3CT2BMeFtdW3EL0mqIo6Ygv6CQ-K3AGEPMhLw" target="_blank">MAX</a></div></div>
         </div>
         <div class="footer-bottom"><p>© 2025 ИдеалСтрой. 15 лет на рынке.</p><a href="#">Политика конфиденциальности</a></div>
     </footer>
 
     <div class="floating-buttons">
-        <a href="https://wa.me/79628738511" class="float-btn whatsapp-btn" target="_blank" title="Написать в WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
+        <a href="https://max.ru/u/f9LHodD0cOKXmlAEZIHVNq3CT2BMeFtdW3EL0mqIo6Ygv6CQ-K3AGEPMhLw" class="float-btn max-btn" target="_blank" title="Написать в MAX">
+            <img src="images/max-logo.png" alt="MAX" class="max-logo">
         </a>
         <button class="float-btn callback-btn" onclick="openCallback()" title="Заказать звонок">
             <svg viewBox="0 0 24 24" fill="currentColor">
