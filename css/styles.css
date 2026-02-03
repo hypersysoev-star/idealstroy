@@ -2850,8 +2850,7 @@ footer {
     }
 
     .header-right .btn-header {
-        padding: 10px 16px;
-        font-size: 11px;
+        display: none; /* Скрыто на мобильных для лучшей видимости дизайнера */
     }
 
     /* Контакт дизайнера на мобильных */
