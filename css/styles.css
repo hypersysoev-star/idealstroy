@@ -1722,10 +1722,10 @@ header.scrolled .designer-contact {
 }
 
 .viz-grid {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
